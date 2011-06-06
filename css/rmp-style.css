@@ -1,0 +1,34 @@
+#rmp-playlist {
+	width: 920px;
+}
+
+#rmp-playlist:after {
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.rmp-showoff {
+	float: left;
+	width: 296px;
+	margin: 5px;
+	text-align: center;
+}
+
+.rmp-showoff a {
+	text-decoration: none;
+	color: #fff;
+}
+
+.rmp-showoff .rmp-image-link {
+	margin-bottom: 5px;
+}
+
+.rmp-showoff .rmp-image-link a {
+	display: block;
+}
+
+.rmp-showoff .rmp-image-link a img {
+	width: 100%;
+}
