@@ -14,7 +14,6 @@ The Remote My Project Playlist Plugin for WordPress makes it extremely easy to d
 <strong>Key Features</strong>
 
 * Shortcode system to allow easy embedding of playlists
-* Works with your current installation of JW Player so that you can use your existing skins and layouts
 
 == Installation ==
 
