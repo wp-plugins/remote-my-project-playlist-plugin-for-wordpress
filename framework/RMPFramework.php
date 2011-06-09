@@ -36,7 +36,11 @@ class RMPFramework
 		$arrPlaylist = $this->buildPlaylistArray();
 			
 		if ($this->isImagePlaylist($arrPlaylist)) {
-			$out = $this->buildPopupImage($arrPlaylist);
+			if ($this->type === 'single') {
+				$out = $this->buildInlineImage($arrPlaylist);
+			} else {
+				$out = $this->buildPopupImage($arrPlaylist);
+			}
 		} else {
 			if ($this->type === 'single') {
 				$out = $this->buildInlineVideo();
@@ -123,13 +127,26 @@ class RMPFramework
 	}
 	
 	/**
+	* Build the inline image gallery
+	* @param $arrPlaylist The playlist as an array
+	* @return string HTML to show the inline image gallery
+	**/
+	protected function buildInlineImage($arrPlaylist) {
+		$out = '<div class="rmp-inline-images-container">' .
+					'<div class';
+		foreach ($arrPlaylist as $item) {
+			$out .= '';
+		}
+	}
+	
+	/**
 	* Build the output for the ajax call
 	* @response string HTML to display in the popup window
 	**/
 	public function generatePopup() {
 		$out = 	'<div id="rmp-player-container">'; 
 				if ( strlen($this->description) > 0 ) {
-					$out = '<div id="rmp-description">' .
+					$out .= '<div id="rmp-description">' .
 						'<div id="rmp-video-inner">' . $this->description . '</div>' .
 					'</div>';
 				}
@@ -178,9 +195,10 @@ class RMPFramework
 	  					"description:\"" . $item['desc'] . "\"," . 
 	  					"image:\"" . $item['thumbnail'] . "\"},";
 	  		}
-	  		$out .="],";
+	  		$out = substr($out, 0, -1);
+	  		$out .="]";
 	  	} else {
-	  		$out = "file: \"" . urldecode( html_entity_decode($this->playlist) ) . "\", ";
+	  		$out = "file: \"" . urldecode( html_entity_decode($this->playlist) ) . "\"";
 	  	}
 	  	return $out;
 	}
