@@ -3,7 +3,7 @@ Contributors: Hollywood Tools LLC, jbmcmichael
 Tags: Remote My Project, JW Player, Video, Flash, RTMP, Playlists, Audio, Image, HTML5, iPad, iPhone, iPod
 Requires at least: 2.8.6
 Tested up to: 3.1.3
-Stable tag: 0.4.1
+Stable tag: 0.5
 
 This plugin is provided by Hollywood Tools LLC.  It enables you to configure and embed a Remote My Project Playlist for use on your WordPress website.
 
@@ -14,7 +14,7 @@ The Remote My Project Playlist Plugin for WordPress makes it extremely easy to d
 <strong>Key Features</strong>
 
 * Shortcode system to allow easy embedding of playlists
-* Works with your current installation of JW Player so that you can use your existing skins and layouts
+* Can display video or image playlists
 
 == Installation ==
 
@@ -28,6 +28,11 @@ The Remote My Project Playlist Plugin for WordPress makes it extremely easy to d
 
 This plugin only works with feeds from Remote My Project.
 
+To see a list of working examples and documentation go to [Remote My Project](http://hollywoodtools.com/wordpress-plugin/)
+
+To see a live example of the plugin in action go to [L2 Digital](http://l2digital.com/work/)  
+
+
 1. To use this you will need to create a Channel at Remote My Project.
 2. Right click on the mRSS Feed link you want to show on your site and select Copy Link Address
 3. In a Post or a Page enter the shortcode for the Remote My Project Plugin - [rmp-video playlist=""]
@@ -36,15 +41,15 @@ This plugin only works with feeds from Remote My Project.
 
 There are a few options you can set with the player:
 
-type - either "playlist" (default) or "single".  
-1. "playlist" will show thumbnails of all files in the playlist, and show the video in a popup window 
-2. "single" shows a single video player, with all files in the playlist as a set of scrollable thumbnails below the video
+type - either "playlist" (default) or "single"  
+1. "playlist" will show thumbnails of all files in the playlist, and show the video in a popup window   
+2. "single" shows a single video player, with all files in the playlist as a set of scrollable thumbnails below the video  
 
-width - the width of the video player in single mode, 640px by default
-height - the height of the player in single mode, 480px by default
-autoplay - either "true" (default) or "false", sets if videos start playing once they are loaded
+width - the width of the video player in single mode, 640px by default  
+height - the height of the player in single mode, 480px by default  
+autoplay - either "true" (default) or "false", sets if videos start playing once they are loaded  
 
-Example of a full shortcode
+Example of a full shortcode  
 [rmp-video playlist="http://remotemyproject.net/rss/index/1" type="single" width="800" height="480" autoplay="false"]
 
 == Requirements ==
@@ -56,25 +61,28 @@ Example of a full shortcode
 
 == Changelog ==
 
-=0.4.1=
-BUG Fixed a rendering error in IE
+= 0.5 =
+* FEATURE Added image galleries.  Can be a playlist-like layout, or an inline viewer
 
-=0.4=
-FEATURE Inline player mode.  Allows you to show your video feed inline, no popup, and still use playlists 
-FEATURE If you have a playlist of all images you will get just an image gallery.  In this mode autoplay, width, and height are ignored
-ENHANCEMENT If your video has no description the popup player shrinks to fit the content
+= 0.4.1 =
+* BUG Fixed a rendering error in IE
+
+= 0.4 =
+* FEATURE Inline player mode.  Allows you to show your video feed inline, no popup, and still use playlists 
+* FEATURE If you have a playlist of all images you will get just an image gallery.  In this mode autoplay, width, and height are ignored
+* ENHANCEMENT If your video has no description the popup player shrinks to fit the content
 
 
-=0.3=
-FEATURE Options pages added
-FEATURE You can upload a licensed version of JWPlayer or automatically grab the latest version from the options page
-FEATURE Users can now change the style of the playlist and player pop up box
+= 0.3 =
+* FEATURE Options pages added
+* FEATURE You can upload a licensed version of JWPlayer or automatically grab the latest version from the options page
+* FEATURE Users can now change the style of the playlist and player pop up box
 
-=0.2=
+= 0.2 =
 * Complete rewrite
 * More modular code to allow for easier updating
 * Playlists now show images for other files in the list, and allow you to directly jump to them
 * Playlist changes mean that playlists will now work in iOS
 
-=0.1=
+= 0.1 =
 * Initial release

@@ -70,7 +70,6 @@
 	text-align: center;
 	font-size: 12px;
 	font-weight: bold;
-	color: #013366;
 }
 .rmp-playlist-thumbs a:hover span {
 	display: block;
@@ -81,6 +80,20 @@
 	border: 3px #fff solid;
     }
 .rmp-playlist-thumbs a:hover img {
+	filter:alpha(opacity=50);
+	opacity: 0.5;
+}
+.rmp-playlist-thumbs button {
+	display: block;
+	text-decoration: none;
+	border:none; 
+	background:transparent; 
+	cursor: pointer;
+}
+.rmp-playlist-thumbs button:hover span {
+	display: block;
+}
+.rmp-playlist-thumbs button:hover img {
 	filter:alpha(opacity=50);
 	opacity: 0.5;
 }

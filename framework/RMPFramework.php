@@ -98,14 +98,14 @@ class RMPFramework
 	* @return string HTML to show the gallery
 	**/
 	protected function buildPopupImage($arrPlaylist) {
-		$out = '<div class="rmp-images-container">';
+		$out = '<div class="rmp-images-container"><ul>';
 		
 		foreach ( $arrPlaylist as $item ) {
-			$out .= '<a rel="gallery-' . $this->div_id .'" title="' . $item['title'] . '" href="' . $item['video'] . '">' .
+			$out .= '<li><a rel="gallery-' . $this->div_id .'" title="' . $item['title'] . '" href="' . $item['video'] . '">' .
 						'<img src="' . $item['thumbnail'] . '">'.
-					'</a>';
+					'</a></li>';
 		}
-		$out .= '</div>';
+		$out .= '</ul></div>';
 		$out .= '<script type="text/javascript">' .
 					'jQuery("a[rel=gallery-' . $this->div_id . ']").fancybox({' .
 						'"transitionIn"	:	"elastic",' .
@@ -133,10 +133,26 @@ class RMPFramework
 	**/
 	protected function buildInlineImage($arrPlaylist) {
 		$out = '<div class="rmp-inline-images-container">' .
-					'<div class';
+					'<div id="rmp-main-image-' . $this->div_id . '" class="rmp-main-image"><img id="rmp-big-' . $this->div_id . '"></div>' . 
+						'<div id="rmp-image-thumbs-' . $this->div_id . '" class="rmp-playlist-thumbs">' . 
+							'<ul>';
 		foreach ($arrPlaylist as $item) {
-			$out .= '';
+			$out .= '<li>' .
+						'<button rel="gallery-' . $this->div_id . '" title="' . $item['title'] . '" href="' . $item['video'] .'">' .
+							'<img src="' . $item['thumbnail'] . '">' .
+						'</button>' . 
+					'</li>';
 		}
+		$out .= "</ul>" .
+				"</div>" .
+				"</div>" . 
+				"</div>";
+		$out .= '<script type="text/javascript">';
+		$out .= str_replace( "**player-div**", $this->div_id,  file_get_contents( plugin_dir_url( dirname(__FILE__) ) . 'js/rmp-inline-image.js') );
+		$out = str_replace( "**player-width**", $this->width, $out );
+		$out = str_replace( "**player-height**", $this->height, $out );
+		$out .= '</script>';
+		return $out;
 	}
 	
 	/**

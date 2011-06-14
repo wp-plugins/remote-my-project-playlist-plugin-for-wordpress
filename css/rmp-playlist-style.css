@@ -18,7 +18,6 @@
 
 .rmp-showoff a {
 	text-decoration: none;
-	color: #fff;
 }
 
 .rmp-showoff .rmp-image-link {
@@ -31,4 +30,20 @@
 
 .rmp-showoff .rmp-image-link a img {
 	width: 100%;
+}
+
+/*
+* Style for the image playlist
+*/
+.rmp-images-container ul li {
+	display: inline;
+	list-style-type: none;
+}
+
+.rmp-images-container li {
+	float: left;
+	width: 100px;
+	height: 100px;
+	margin: 5px;
+	background-color: #eee;
 }
