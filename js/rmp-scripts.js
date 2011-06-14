@@ -46,10 +46,23 @@ jQuery(document).ready(function() {
 			}
 		});			
 	});
-	function getDimensions(values, dimension) {
-		var valArray = values.split(';');
-		
-	}
+
+	//Popup image specific js
+	jQuery('.rmp-images-container ul li a img').load(function() {
+		var width = jQuery(this).width();
+		var height = jQuery(this).height();
+		var p_width = jQuery(this).parent().parent().innerWidth();
+		var p_height = jQuery(this).parent().parent().innerHeight();
+
+		jQuery(this).css({
+			'margin-left': Math.floor((p_width - width) / 2),
+            'margin-top': Math.floor((p_height - height) / 2),
+		});
+	});
+	// TODO:FIX stupid hack.  find a way to get rid of this
+	// works on single post page without this
+	//only fails in the_loop	
+	jQuery('.rmp-images-container ul li a img').trigger('load');
 });
 
 
