@@ -105,7 +105,7 @@ class RMPFramework
 						'<img src="' . $item['thumbnail'] . '">'.
 					'</a></li>';
 		}
-		$out .= '</ul></div>';
+		$out .= '</ul></div><div style="clear:both"></div>';
 		$out .= '<script type="text/javascript">' .
 					'jQuery("a[rel=gallery-' . $this->div_id . ']").fancybox({' .
 						'"transitionIn"	:	"elastic",' .
