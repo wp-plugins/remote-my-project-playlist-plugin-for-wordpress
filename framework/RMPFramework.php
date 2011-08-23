@@ -163,7 +163,7 @@ class RMPFramework
 		$out = 	'<div id="rmp-player-container">'; 
 				if ( strlen($this->description) > 0 ) {
 					$out .= '<div id="rmp-description">' .
-						'<div id="rmp-video-inner">' . $this->description . '</div>' .
+						'<div id="rmp-video-inner">' . urldecode($this->description) . '</div>' .
 					'</div>';
 				}
 					$out .= '<div id="rmp-video">' .
@@ -235,7 +235,7 @@ class RMPFramework
 		foreach ( $doc->getElementsByTagName('item') as $node ) { 
 			$itemRSS = array ( 
 						'title' => $node->getElementsByTagName('title')->item(0)->nodeValue, 
-						'desc' => $node->getElementsByTagName('description')->item(0)->nodeValue, 
+						'desc' => urlencode($node->getElementsByTagName('description')->item(0)->nodeValue), 
 						'video' => $node->getElementsByTagName('content')->item(0)->getAttribute('url'), 
 						'thumbnail' => $node->getElementsByTagName('thumbnail')->item(0)->getAttribute('url') 
 					); 
