@@ -145,10 +145,9 @@ class RMPFramework
 		}
 		$out .= "</ul>" .
 				"</div>" .
-				"</div>" . 
 				"</div>";
 		$out .= '<script type="text/javascript">';
-		$out .= str_replace( "**player-div**", $this->div_id,  file_get_contents( plugin_dir_url( dirname(__FILE__) ) . 'js/rmp-inline-image.js') );
+		$out .= str_replace( "**player-div**", $this->div_id,  file_get_contents( plugin_dir_path( dirname(__FILE__) ) . 'js/rmp-inline-image.js') );
 		$out = str_replace( "**player-width**", $this->width, $out );
 		$out = str_replace( "**player-height**", $this->height, $out );
 		$out .= '</script>';
@@ -189,7 +188,7 @@ class RMPFramework
 					"autoplay: '" . $this->autoplay . "'," .
 					$this->jsonPlaylist() .
 				"});";
-		$out .= str_replace( "**player-div**", $this->div_id,  file_get_contents( plugin_dir_url( dirname(__FILE__) ) . 'js/jwplayer_controls.js') );
+		$out .= str_replace( "**player-div**", $this->div_id,  file_get_contents( plugin_dir_path( dirname(__FILE__) ) . 'js/jwplayer_controls.js') );
 		$out = str_replace( "**autoplay**", $this->autoplay, $out );
 		$out = str_replace( "**player-width**", $this->width, $out );
 		return $out;
