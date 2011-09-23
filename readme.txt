@@ -3,7 +3,7 @@ Contributors: Hollywood Tools LLC, jbmcmichael
 Tags: Remote My Project, JW Player, Video, Flash, RTMP, Playlists, Audio, Image, HTML5, iPad, iPhone, iPod
 Requires at least: 2.8.6
 Tested up to: 3.2.1
-Stable tag: 0.5.2
+Stable tag: 0.5.3
 
 This plugin is provided by Hollywood Tools LLC.  It enables you to configure and embed a Remote My Project Playlist for use on your WordPress website.
 
@@ -28,7 +28,7 @@ The Remote My Project Playlist Plugin for WordPress makes it extremely easy to d
 
 This plugin only works with feeds from Remote My Project.
 
-To see a list of working examples and documentation go to [Remote My Project](http://hollywoodtools.com/wordpress-plugin/)
+To see a list of working examples and documentation go to [Remote My Project](http://remotemyproject.com/wordpress-plugin/)
 
 To see a live example of the plugin in action go to [L2 Digital](http://l2digital.com/work/)  
 
@@ -60,6 +60,9 @@ Example of a full shortcode
 * JW Player v5.3 or higher.  This can be downloaded directly from the options page.
 
 == Changelog ==
+
+= 0.5.3 =
+BUG Fixed a problem with pathing on multisites
 
 = 0.5.2 =
 BUG Fixed a problem with improper escaping of special html strings
