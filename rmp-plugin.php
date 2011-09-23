@@ -4,7 +4,7 @@ Plugin Name: Remote My Project Plugin for WordPress
 Plugin URI: http://www.remotemyproject.com
 Description: Plugin for displaying channels from Remote My Project
 Author: JB McMichael
-Version: 0.5.3
+Version: 0.5.4
 Author URI: http://www.remotemyproject.com
 
 Copyright 2011 Hollywood Tools Inc.

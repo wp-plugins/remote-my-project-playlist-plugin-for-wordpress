@@ -145,7 +145,6 @@ class RMPFramework
 		}
 		$out .= "</ul>" .
 				"</div>" .
-				"</div>" . 
 				"</div>";
 		$out .= '<script type="text/javascript">';
 		$out .= str_replace( "**player-div**", $this->div_id,  file_get_contents( plugin_dir_path( dirname(__FILE__) ) . 'js/rmp-inline-image.js') );
