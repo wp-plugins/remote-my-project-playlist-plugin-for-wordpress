@@ -42,23 +42,26 @@
 }
 
 .rmp-playlist-thumbs {
-	position: relative;
-	height: 70px;
 	width: 100%;
+	height: auto;
+	max-height: 150px;
 	overflow: auto;
 }
 .rmp-playlist-thumbs ul {
-	display: block;
-	height: 70px;
-	width: 1500px;
-	padding: 0;
-	margin: 0;
+	width: 6400px;
+	height: 105px;
+	padding: 10px 10px 0 0;
 	list-style: none;
 }
 .rmp-playlist-thumbs li {
-	display: block;
 	float: left;
-	padding: 0 4px;
+	display: inline;
+	list-style: none;
+	line-height: 0;
+	width: 120px;
+	height: 90px;
+	padding: 4px 7px 4px 7px;
+	margin: 0 0 0 18px;
 }
 .rmp-playlist-thumbs a {
 	display: block;
