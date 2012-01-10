@@ -84,7 +84,7 @@ class RMPFramework
 	public function buildInlineVideo() {
 		$out =  '<div class="rmp-single-container">' .
 					'<div id="rmp-playlist-' . $this->div_id . '" class="rmp-playlist-thumbs" style="width:' . $this->width . 'px"></div>' .
-					'<div id="rmp-single-video-player-' . $this->div_id . '" class="rmp-single">' .
+					'<div id="rmp-single-video-player-' . $this->div_id . '" class="rmp-single" style="width:' . $this->width . 'px">' .
 						'<div id="rmp-single-video-title-' . $this->div_id . '" class="rmp-title"></div>' .
 						'<div id="rmp-video-player-' . $this->div_id . '">Loading video...</div>' .
 					'</div>' .
